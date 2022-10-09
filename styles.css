@@ -20,7 +20,7 @@ img {
     width: 25rem;
     max-width: 100%;
     border-radius: 50%;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 a {
@@ -49,6 +49,9 @@ li {
     padding: auto 1.5rem;
 }
 
+
+/*HEADER SECTION*/
+
 header {
     min-height: 70vh;
     width: 100%;
@@ -57,25 +60,17 @@ header {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 }
 
-h1,
-h2,
-h3 {
+#name,
+.desc,
+.date {
     color: #F6EFE2;
 }
 
-h4 {
-    display: inline-block;
-    font-size: 2rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-h1 {
+#name {
     font-size: 2.5rem;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -94,11 +89,6 @@ hr {
     text-align: center;
     border: 2px #F6EFE2 solid;
     background-color: #F6EFE2;
-}
-
-#tLine {
-    background-color: #110C06;
-    border: 2px #110C06 solid;
 }
 
 .date {
@@ -140,13 +130,31 @@ blockquote p {
     margin-top: -3rem;
 }
 
+
+/*TIMELINE SECTION*/
+
+#tLine {
+    background-color: #110C06;
+    border: 2px #110C06 solid;
+}
+
+h4 {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 .link {
     text-align: center;
     margin-top: 2.5rem;
     margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
 }
+
+
+/*FOOTER SECTION*/
 
 footer {
     height: 5rem;
@@ -163,4 +171,56 @@ footer .text-box {
 footer .text-box p {
     color: #F6EFE2;
     font-weight: 300;
+}
+
+
+/*MEDIA QUERIES*/
+
+@media(max-width: 1175px) {
+    .container-1 .text-box {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    .row {
+        flex-direction: column;
+    }
+    #name {
+        font-size: 2rem;
+        padding-top: .6rem;
+    }
+    .desc {
+        padding: 0 2rem;
+    }
+    blockquote {
+        width: 90%;
+    }
+    .quote-author {
+        margin-right: 4rem;
+    }
+}
+
+@media(max-width: 848px) {
+    footer .text-box {
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    .quote-author {
+        margin-right: 3rem;
+    }
+}
+
+@media(max-width: 600px) {
+    .desc {
+        font-size: 1.1rem;
+    }
+    #name {
+        font-size: 1.7rem;
+    }
+    blockquote {
+        width: 95%;
+    }
+    .quote-author {
+        margin-right: 1rem;
+    }
 }
